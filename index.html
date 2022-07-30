@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <div class="intro">
+        <h1 class="intro__title">Learn to code by watching others</h1>
+        <p class="intro__text">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+      <div class="sign__form">
+        <button class="form__top-btn">
+          <span class="fontW--600"> Try it free 7 days</span> then $20/mo.
+          thereafter
+        </button>
+        <form action="" class="form" prevent>
+          <span class="form__wrapper">
+            <input
+              class="form__input"
+              id="#name"
+              type="text"
+              placeholder="First NAme"
+              name="First Name"
+            />
+            <span class="error__icon"
+              ><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                  <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                  <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                </g>
+              </svg>
+            </span>
+          </span>
+          <span class="form__wrapper">
+            <input
+              id="lastName"
+              class="form__input"
+              type="text"
+              placeholder="Last Name"
+              name="Last Name"
+            />
+            <span class="error__icon"
+              ><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                  <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                  <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                </g>
+              </svg>
+            </span>
+          </span>
+          <span class="form__wrapper">
+            <input
+              id="email"
+              class="form__input"
+              type="text"
+              placeholder="Email Address"
+              name="Email"
+            />
+            <span class="error__icon"
+              ><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                  <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                  <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                </g>
+              </svg>
+            </span>
+          </span>
+          <span class="form__wrapper">
+            <input
+              id="password"
+              class="form__input"
+              type="password"
+              placeholder="Password"
+              name="Password"
+            />
+            <span class="error__icon"
+              ><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <circle fill="#FF7979" cx="12" cy="12" r="12" />
+                  <rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1" />
+                  <rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1" />
+                </g>
+              </svg>
+            </span>
+          </span>
+          <button class="form__button">Claim your free trial</button>
+          <span class="form__terms"
+            >By clicking the button, you are agreeing to our
+            <span class="form__terms--pink"> Terms and Services</span></span
+          >
+        </form>
+      </div>
+    </main>
+
+    <div role="contentinfo" class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="js.js"></script>
+  </body>
+</html>
