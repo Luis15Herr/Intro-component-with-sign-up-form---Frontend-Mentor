@@ -44,7 +44,7 @@
               class="form__input"
               id="#name"
               type="text"
-              placeholder="First NAme"
+              placeholder="First Name"
               name="First Name"
             />
             <span class="error__icon"
@@ -56,6 +56,7 @@
                 </g>
               </svg>
             </span>
+            <span class="error__msg">First Name cannot be empty</span>
           </span>
           <span class="form__wrapper">
             <input
@@ -74,6 +75,7 @@
                 </g>
               </svg>
             </span>
+            <span class="error__msg">Last Name cannot be empty</span>
           </span>
           <span class="form__wrapper">
             <input
@@ -92,6 +94,10 @@
                 </g>
               </svg>
             </span>
+            <span class="error__msg">Email cannot be empty</span>
+            <span class="error__msg error__msg--email">
+              Looks like this is not an email</span
+            >
           </span>
           <span class="form__wrapper">
             <input
@@ -110,6 +116,7 @@
                 </g>
               </svg>
             </span>
+            <span class="error__msg">Password cannot be empty</span>
           </span>
           <button class="form__button">Claim your free trial</button>
           <span class="form__terms"
@@ -120,11 +127,14 @@
       </div>
     </main>
 
-    <div role="contentinfo" class="attribution">
+    <div class="attribution" role="contentinfo">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a target="_blank" href="https://www.instagram.com/luisherrerael"
+        >Luis Herrera⚡</a
+      >.
     </div>
     <script src="js.js"></script>
   </body>

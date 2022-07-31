@@ -23,20 +23,6 @@ body {
   position: relative;
 }
 
-body::after {
-  width: 100%;
-  height: 100%;
-  top: 0%;
-  left: 0%;
-  pointer-events: none;
-  background-image: url(./design/active-states.jpg);
-  opacity: 0.3;
-  position: absolute;
-  content: "";
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .container {
   width: 1200px;
   margin: auto;
@@ -87,6 +73,7 @@ body::after {
   position: relative;
   font-size: 0.95em;
   padding-top: 3px;
+  cursor: pointer;
 }
 
 .form__top-btn::after {
@@ -138,6 +125,11 @@ body::after {
   padding-top: 5px;
   outline: none;
   font-weight: 700;
+  color: #3e3c49;
+}
+
+.form__input:focus {
+  outline: 1px solid #6055a5;
 }
 
 .error {
@@ -154,6 +146,10 @@ body::after {
 
 .error .error__msg {
   display: block;
+}
+
+.error .error__msg--email {
+  display: none;
 }
 
 .error__email .form__input {
@@ -203,11 +199,15 @@ body::after {
   text-transform: uppercase;
   font-size: 1.07em;
   padding-top: 5px;
+  position: relative;
+  -webkit-box-shadow: 0px 5px 0px 0px #55ab86;
+          box-shadow: 0px 5px 0px 0px #55ab86;
 }
 
 .form__terms {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.67em;
+  color: #b9b6d3;
 }
 
 .form__terms--pink {
@@ -218,9 +218,60 @@ body::after {
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 10px;
+  font-weight: 600;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: #6055a5;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 70%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html,
+  body {
+    height: auto;
+  }
+  .container {
+    padding: 0 25px;
+    width: 100%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-bottom: 30px;
+  }
+  .intro {
+    text-align: center;
+    margin-top: 92px;
+    margin-bottom: 66px;
+  }
+  .intro__title {
+    font-size: 1.65em;
+    line-height: 35px;
+    margin-bottom: 19px;
+  }
+  .form__top-btn {
+    padding: 0 50px;
+    height: 90px;
+  }
+  .form {
+    padding: 24px;
+  }
+  .form__wrapper {
+    margin-bottom: 17px;
+  }
+  .form__button {
+    margin-bottom: 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

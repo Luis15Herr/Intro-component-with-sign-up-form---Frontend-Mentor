@@ -25,19 +25,6 @@ body {
   background-image: url(./images/bg-intro-desktop.png);
   background-color: $Red;
   position: relative;
-  &::after {
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    pointer-events: none;
-    background-image: url(./design/active-states.jpg);
-    opacity: 0.3;
-    position: absolute;
-    content: "";
-    background-position: center;
-    background-repeat: no-repeat;
-  }
 }
 
 .container {
@@ -79,6 +66,7 @@ body {
   position: relative;
   font-size: 0.95em;
   padding-top: 3px;
+  cursor: pointer;
   &::after {
     content: "";
     position: absolute;
@@ -125,6 +113,10 @@ body {
   padding-top: 5px;
   outline: none;
   font-weight: 700;
+  color: $DarkBlue;
+  &:focus {
+    outline: 1px solid $Blue;
+  }
 }
 .error {
   margin-bottom: 17px;
@@ -137,7 +129,11 @@ body {
   .error__msg {
     display: block;
   }
+  .error__msg--email {
+    display: none;
+  }
 }
+
 .error__email {
   .form__input {
     border: 2px solid $Red;
@@ -180,10 +176,14 @@ body {
   text-transform: uppercase;
   font-size: 1.07em;
   padding-top: 5px;
+  position: relative;
+  box-shadow: 0px 5px 0px 0px rgba(85, 171, 134, 100%);
 }
 .form__terms {
-  font-weight: 600;
+  font-weight: 500;
+
   font-size: 0.67em;
+  color: $GrayishBlue;
 }
 .form__terms--pink {
   color: $Red;
@@ -192,7 +192,54 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  font-weight: 600;
+  a {
+    color: $Blue;
+  }
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+@media screen and (max-width: 800px) {
+  .container {
+    width: 70%;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html,
+  body {
+    height: auto;
+  }
+  .container {
+    padding: 0 25px;
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding-bottom: 30px;
+  }
+  .intro {
+    text-align: center;
+    margin-top: 92px;
+    margin-bottom: 66px;
+  }
+  .intro__title {
+    font-size: 1.65em;
+    line-height: 35px;
+    margin-bottom: 19px;
+  }
+  .form__top-btn {
+    padding: 0 50px;
+    height: 90px;
+  }
+  .form {
+    padding: 24px;
+  }
+  .form__wrapper {
+    margin-bottom: 17px;
+  }
+  .form__button {
+    margin-bottom: 5px;
+  }
 }

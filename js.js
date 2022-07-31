@@ -11,22 +11,21 @@ form.addEventListener("submit", function (e) {
   inputs.forEach((item) => {
     console.log(item.value);
     if (item.value.trim() != "") {
+      console.log("un vacio");
       item.parentNode.classList.remove("error");
       if (item.name === "Email") {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(item.value)) {
           item.parentNode.classList.remove("error__email");
           return true;
         }
-        item.parentNode.insertAdjacentHTML(
-          "afterend",
-          "<span class='error__msg error__msg--email'> Looks like this is not an email</span>"
-        );
+        if (item.parentNode.classList.contains("error__email")) return;
         item.parentNode.classList.add("error__email");
+        item.parentNode.classList.add("error");
       }
     } else {
+      item.parentNode.classList.remove("error__email");
       if (item.parentNode.classList.contains("error")) return true;
       item.parentNode.classList.add("error");
-      item.parentNode.innerHTML += `<span class="error__msg">${item.name} cannot be empty</span>`;
     }
   });
 });
